@@ -1,0 +1,96 @@
+<?php
+include 'connect.php'; // Include your database connection file
+
+// Check if the form is submitted
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Retrieve form data
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $orderId = $_POST['order_id'];
+    $message = $_POST['message'];
+
+    // Prepare SQL statement
+    $stmt = $conn->prepare("INSERT INTO feedback (name, email, order_id, message) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssis", $name, $email, $orderId, $message);
+
+    // Execute the query
+    if ($stmt->execute()) {
+        echo "Thank you for your feedback! We will review it soon.";
+    } else {
+        echo "Error: " . $stmt->error;
+    }
+
+    // Close connection
+    $stmt->close();
+    $conn->close();
+}
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - The Corner Cafe</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Back</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="contact-section">
+        <div class="contact-container">
+            <h1>Contact Us</h1>
+            <p>We would love to hear from you! Please reach out to us using the contact information below or by filling out the form.</p>
+
+            <div class="contact-info">
+                <h2>Our Address</h2>
+                <p>1234 Mohammadpur Lane, Dhaka, Bangladesh</p>
+
+                <h2>Phone</h2>
+                <p>+123-456-7890</p>
+
+                <h2>Email</h2>
+                <p><a href="mailto:CornerCafe@gmail.com">CornerCafe@gmail.com</a></p>
+            </div>
+
+            <div class="contact-form">
+                <h2>Send Us a Message</h2>
+                <form action="submit-feedback.php" method="POST">
+                    <div class="input-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="order_id">Order ID</label>
+                        <input type="text" id="order_id" name="order_id" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 [The Corner Cafe]. All rights reserved.</p>
+        <p>1234 Mohammadpur Lane, Dhaka, Bangladesh | Phone: +123-456-7890</p>
+        <p>Email: <a href="mailto:CornerCafe@gmail.com">CornerCafe@gmail.com</a></p>
+        <ul>
+            <li><a href="https://github.com/Minhazul213" target="_blank">Github</a></li>
+        </ul>
+    </footer>
+</body>
+</html>
+

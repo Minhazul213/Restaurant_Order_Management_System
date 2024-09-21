@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Corner Cafe - Welcome</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: #f39c12;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #e67e22;
+        }
+
+        /* Header */
+        header {
+            background-color: #1e1e1e;
+            padding: 20px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            font-size: 18px;
+        }
+
+        /* Section */
+        section {
+            display: flex;
+            justify-content: space-between;
+            padding: 50px;
+            background: url("d2.jpg") no-repeat center center/cover;
+            flex-wrap: wrap;
+        }
+
+        article {
+            flex: 1 1 65%;
+            background-color: #e6e1a1;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-right: 20px;
+        }
+
+        article h1 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+
+        article p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .main-image {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .image-grid {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .image-grid img {
+            width: 30%;
+            border-radius: 10px;
+        }
+
+        /* Aside */
+        aside {
+            flex: 1 1 30%;
+            background-color: #9fc6d8;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        aside h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #34495e;
+        }
+
+        aside ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        aside ul li {
+            margin-bottom: 15px;
+        }
+
+        aside ul li a {
+            text-decoration: none;
+            color: #34495e;
+            font-weight: bold;
+        }
+
+        /* Details */
+        details {
+            margin-top: 30px;
+            background-color: #c26d6d;
+            padding: 20px;
+            border: 1px solid #311313;
+            border-radius: 10px;
+        }
+
+        details summary {
+            font-size: 20px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        details p {
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #ecf0f1;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+
+        footer ul {
+            padding: 0;
+            margin: 10px 0;
+            list-style-type: none;
+        }
+
+        footer ul li {
+            display: inline-block;
+            margin: 0 10px;
+        }
+
+        footer ul li a {
+            color: #ecf0f1;
+        }
+
+        /* Media Queries for Responsiveness */
+        @media (max-width: 768px) {
+            section {
+                flex-direction: column;
+                padding: 20px;
+            }
+
+            article {
+                margin: 0 0 20px 0;
+            }
+
+            nav ul li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            aside {
+                margin-top: 20px;
+            }
+
+            .image-grid img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="viewD.php">Food Menu</a></li>
+                <li><a href="order.php">Order Process</a></li>
+                <li><a href="submitFeedB.php">Feedback</a></li>
+                <li><a href="signUp.php">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <section>
+        <article>
+            <h1>Welcome to The Corner Cafe</h1>
+            <p>How can we help you today? Whether you're craving delicious food or looking for an amazing dining experience, we're here for you!</p>
+            <div class="image-grid">
+                <img src="d3.jpg" alt="Modern design" class="main-image">
+                <img src="download (1).jpg" alt="Restaurant atmosphere" class="main-image">
+                <img src="download.jpg" alt="Gourmet dish" class="main-image">
+            </div>
+        </article>
+
+        <aside>
+            <h2>Latest News</h2>
+            <ul>
+                <li><a href="#dish1">Chef's Special Dish of the Day</a></li>
+                <li><a href="#offer1">Limited Time Offer: 20% Off on All Orders</a></li>
+                <li><a href="#event1">Upcoming Event: Live Music Night</a></li>
+            </ul>
+        </aside>
+
+        <details>
+            <summary>Click to view more details about our restaurant</summary>
+            <p>Welcome to The Corner Cafe! We offer a variety of gourmet dishes made from fresh, locally sourced ingredients. Every dish is crafted with care to bring you a unique culinary experience.</p>
+            <p>Located in the heart of Dhaka, we are committed to offering our customers the freshest ingredients and the best service. Whether you're here for a quick bite or a gourmet dinner, we have something for everyone!</p>
+        </details>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 The Corner Cafe. All rights reserved.</p>
+        <p>1234 Mohammadpur Lane, Dhaka, Bangladesh | Phone: +123-456-7890</p>
+        <p>Email: <a href="mailto:CornerCafe@gmail.com">CornerCafe@gmail.com</a></p>
+        <ul>
+            <li><a href="https://github.com/Minhazul213" target="_blank">Github</a></li>
+        </ul>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+
+#restaurant-info {
+    text-align: center;
+    background-color: #0d131a;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 20px auto;
+    width: 80%;
+}
+
+#restaurant-info h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#restaurant-info p {
+    font-size: 16px;
+    color: #666;
+}
+
+.highlights {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.highlight-item {
+    width: 30%;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.highlight-item h2 {
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.highlight-item p {
+    color: #555;
+}
